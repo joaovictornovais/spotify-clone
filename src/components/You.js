@@ -1,7 +1,6 @@
 import React from 'react'
 
-const MadeFor = () => {
-
+const You = () => {
   const playlists = [
     {
       id: 1,
@@ -43,7 +42,7 @@ const MadeFor = () => {
   return (
     <>
     <div className="flex items-center justify-between mt-10">
-      <a href="#" className="text-2xl font-bold hover:underline">Feito para João Victor</a>
+      <a href="#" className="text-2xl font-bold hover:underline">100% Você</a>
       <a href="#" className="text-sm font-bold text-zinc-400 hover:underline">Mostrar tudo</a>
     </div>
     
@@ -61,5 +60,4 @@ const MadeFor = () => {
     </>
   )
 }
-
-export default MadeFor
+export default You
