@@ -6,10 +6,10 @@ import UpNav from './components/UpNav';
 
 function App() {
   return (
-    <div className="bg-zinc-900 h-screen text-zinc-50 flex flex-col">
+    <div className="bg-zinc-900 h-screen text-zinc-50 flex flex-col overflow-hidden">
       <div className="flex flex-1">
         <Siderbar />
-        <main className="flex-1 p-6">
+        <main className="flex-1 ml-[288px] p-6 overflow-y-auto h-[80%]">
           <UpNav />
           <Recommended/>
           <MadeFor />

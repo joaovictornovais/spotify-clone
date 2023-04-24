@@ -5,7 +5,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-900 border-t border-zinc-700 p-6 flex items-center justify-between">
+    <footer className="fixed w-full bottom-0 bg-zinc-900 border-t border-zinc-700 p-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img src="/album1.jpg" alt="Capa do Álbum Blonde do rapper Frank Ocean " width={70} height={70}/>
           <div className="flex flex-col">
