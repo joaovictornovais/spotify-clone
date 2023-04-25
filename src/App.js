@@ -4,6 +4,8 @@ import MadeFor from './components/MadeFor';
 import Recommended from './components/Recommended';
 import UpNav from './components/UpNav';
 import You from './components/You';
+import RecentlyPlayed from './components/RecentlyPlayed';
+import FavoriteArtists from './components/FavoriteArtists';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Recommended/>
           <MadeFor />
           <You />
+          <RecentlyPlayed />
+          <FavoriteArtists />
         </main>
       </div>
       <Footer />
