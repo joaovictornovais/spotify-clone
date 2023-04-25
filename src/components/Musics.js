@@ -1,5 +1,5 @@
 import { ArrowDownCircle, ChevronDown, Clock3, MoreHorizontal, Pause, Play, Search, UserPlus } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const Musics = () => {
 
@@ -33,6 +33,8 @@ const Musics = () => {
     },
   ]
 
+  const [isHover, setIsHover] = useState(false);
+
   return (
     <div className="flex flex-col gap-4 mt-10">
       <div className="flex justify-between gap-4">
@@ -51,7 +53,7 @@ const Musics = () => {
         </div>
       </div>
       <table>
-        <thead className="text-zinc-400 text-sm font-normal border-b-2 border-b-zinc-500">
+        <thead className="text-zinc-400 text-sm font-normal border-b-[1px] border-b-zinc-500">
           <tr className="text-left">
             <th className="text-center w-[40px]">#</th>
             <th className="w-[420px]">Título</th>
@@ -62,9 +64,9 @@ const Musics = () => {
         </thead>
         <tbody>
           {
-            vibin.map((musica) => (
-              <tr className="text-zinc-400 hover:bg-white/10" key={musica.id}>
-                <td className="text-center text-zinc-300 p-5 rounded-l-lg">{musica.id}</td>
+            vibin.map((musica, index) => (
+              <tr className="w-[100vw] rounded-lg  text-zinc-400 hover:bg-white/10" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} key={index}>
+                <td className={isHover ? 'flex justify-center items-center h-[75px] w-[75px] px-4 text-center text-zinc-300' : 'text-center h-[75px] w-[75px] text-zinc-300'}>{isHover ? <Play size={24}/> : `${musica.id}`}</td>
                 <td>
                   <div className="flex gap-4 w-11 h-11 items-center">
                     <img src={musica.image} alt="Capa do Álbum"/>
@@ -79,7 +81,7 @@ const Musics = () => {
                 </td>
                 <td>{musica.album}</td>
                 <td>{musica.date}</td>
-                <td className="rounded-r-lg">{musica.time}</td>
+                <td>{musica.time}</td>
               </tr>
             ))
           }
