@@ -1,5 +1,6 @@
 import { Heart, Home } from 'lucide-react'
 import { Library, Plus, Search } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 const Siderbar = () => {
@@ -14,18 +15,18 @@ const Siderbar = () => {
         <div className="w-3 h-3 bg-green-500 rounded-full"/>
       </div>
       <nav className="space-y-5 mt-10">
-        <a href="#" className="flex items-center gap-3 font-semibold text-xs text-white">
+        <Link to="/" className="flex items-center gap-3 font-semibold text-xs text-white">
           <Home />
           Início
-        </a>
-        <a href="#" className="flex items-center gap-3 font-semibold text-xs text-zinc-400">
+        </Link>
+        <Link to="/buscar" className="flex items-center gap-3 font-semibold text-xs text-zinc-400">
           <Search />
           Buscar
-        </a>
-        <a href="#" className="flex items-center gap-3 font-semibold text-xs text-zinc-400">
+        </Link>
+        <Link to="/biblioteca" className="flex items-center gap-3 font-semibold text-xs text-zinc-400">
           <Library />
           Sua Biblioteca
-        </a>
+        </Link>
       </nav>
       <nav className="flex flex-col mt-10 space-y-3">
         <a href="#" className="flex items-center font-semibold text-xs text-zinc-300 gap-3">
