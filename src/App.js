@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Buscar from './pages/Buscar';
 import Biblioteca from './pages/Biblioteca';
 import UpNav from './components/UpNav';
+import Playlist from './pages/Playlist';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/" element={<Inicio />} />
               <Route path="/buscar" element={<Buscar />} />
               <Route path="/biblioteca" element={<Biblioteca />} />
+              <Route path="/playlist" element={<Playlist />} />
             </Routes>
           </main>
         </div>
