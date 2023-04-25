@@ -1,9 +1,12 @@
 import { Heart, Home } from 'lucide-react'
 import { Library, Plus, Search } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Siderbar = () => {
+
+  const [section, setSection] = useState('search')
+
   return (
     <aside className="fixed w-72 bg-zinc-950 p-6 overflow-y-auto h-[calc(100vh-119px)] 
     scrollbar-thumb-gray-300
@@ -15,15 +18,15 @@ const Siderbar = () => {
         <div className="w-3 h-3 bg-green-500 rounded-full"/>
       </div>
       <nav className="space-y-5 mt-10">
-        <Link to="/" className="flex items-center gap-3 font-semibold text-xs text-white">
+        <Link to="/" onClick={() => setSection('home')} className={section === 'home' ? 'flex items-center gap-3 font-semibold text-xs text-white' : 'flex items-center gap-3 font-semibold text-xs text-zinc-400'}>
           <Home />
           Início
         </Link>
-        <Link to="/buscar" className="flex items-center gap-3 font-semibold text-xs text-zinc-400">
+        <Link to="/buscar" onClick={() => setSection('search')} className={section === 'search' ? 'flex items-center gap-3 font-semibold text-xs text-white' : 'flex items-center gap-3 font-semibold text-xs text-zinc-400'}>
           <Search />
           Buscar
         </Link>
-        <Link to="/biblioteca" className="flex items-center gap-3 font-semibold text-xs text-zinc-400">
+        <Link to="/biblioteca" onClick={() => setSection('library')} className={section === 'library' ? 'flex items-center gap-3 font-semibold text-xs text-white' : 'flex items-center gap-3 font-semibold text-xs text-zinc-400'}>
           <Library />
           Sua Biblioteca
         </Link>
