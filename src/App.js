@@ -5,6 +5,7 @@ import Inicio from './pages/Inicio';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Buscar from './pages/Buscar';
 import Biblioteca from './pages/Biblioteca';
+import UpNav from './components/UpNav';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           scrollbar-thumb-gray-300
           scrollbar-thin
           scrollbar-h-2">
+            <UpNav />
             <Routes>
               <Route path="/" element={<Inicio />} />
               <Route path="/buscar" element={<Buscar />} />
