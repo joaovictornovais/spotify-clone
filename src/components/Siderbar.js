@@ -42,11 +42,11 @@ const Siderbar = () => {
         </a>
       </nav>
       <nav className="mt-5 pt-5 border-t border-zinc-800 flex flex-col gap-2">
-        <Link to="/playlist" className="text-sm text-zinc-400 hover:text-zinc-100">vibin'</Link>
-        <Link to="/playlist" className="text-sm text-zinc-400 hover:text-zinc-100">vibezzz</Link>
-        <Link to="/playlist" className="text-sm text-zinc-400 hover:text-zinc-100">chillin</Link>
-        <Link to="/playlist" className="text-sm text-zinc-400 hover:text-zinc-100">stars</Link>
-        <Link to="/playlist" className="text-sm text-zinc-400 hover:text-zinc-100">still vibin'</Link>
+        <Link to="/playlist" onClick={() => setSection('vibin')}className={section === 'vibin' ? 'text-sm text-zinc-100' : 'text-sm text-zinc-400 hover:text-zinc-100'}>vibin'</Link>
+        <Link to="/playlist" onClick={() => setSection('vibezzz')}className={section === 'vibezzz' ? 'text-sm text-zinc-100' : 'text-sm text-zinc-400 hover:text-zinc-100'}>vibezzz</Link>
+        <Link to="/playlist" onClick={() => setSection('chillin')}className={section === 'chillin' ? 'text-sm text-zinc-100' : 'text-sm text-zinc-400 hover:text-zinc-100'}>chillin</Link>
+        <Link to="/playlist" onClick={() => setSection('stars')}className={section === 'stars' ? 'text-sm text-zinc-100' : 'text-sm text-zinc-400 hover:text-zinc-100'}>stars</Link>
+        <Link to="/playlist" onClick={() => setSection('still vibin')}className={section === 'still vibin' ? 'text-sm text-zinc-100' : 'text-sm text-zinc-400 hover:text-zinc-100'}>still vibin'</Link>
       </nav>
     </aside>
   )
