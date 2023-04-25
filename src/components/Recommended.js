@@ -1,7 +1,15 @@
 import { Play } from 'lucide-react'
+import moment from 'moment/moment'
 import React from 'react'
 
 const Recommended = () => {
+
+  const greetings = () => {
+    let hour = moment().format('HH')
+    if (hour < 12) return 'Bom dia'
+    else if (hour < 18) return 'Boa tarde'
+    else return 'Boa noite'
+  }
 
   const albums = [
     {
@@ -49,7 +57,7 @@ const Recommended = () => {
   ]
   return (
     <>
-    <h1 className="text-3xl font-bold mt-10">Boa tarde</h1>
+    <h1 className="text-3xl font-bold mt-10">{greetings}</h1>
     <div className="grid grid-cols-3 gap-6 mt-5">
       {
         albums.map((album) => (
