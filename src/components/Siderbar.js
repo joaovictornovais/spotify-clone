@@ -36,9 +36,10 @@ const Siderbar = () => {
       </nav>
       <nav className="mt-5 pt-5 border-t border-zinc-800 flex flex-col gap-2">
         <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">vibin'</a>
-        <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">funk</a>
         <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">vibezzz</a>
-        <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">WE GO JIM</a>
+        <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">chillin</a>
+        <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">stars</a>
+        <a href="#" className="text-sm text-zinc-400 hover:text-zinc-100">still vibin'</a>
       </nav>
     </aside>
   )
