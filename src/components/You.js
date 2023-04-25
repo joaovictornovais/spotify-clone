@@ -11,22 +11,22 @@ const You = () => {
     },
     {
       id: 2,
-      name: "Daily Mix 1",
-      description: "Metro Boomin, XXXTENTACION, Future e mais",
+      name: "Sua máquina do tempo",
+      description: "Criamos uma playlist personalizada para você relembrar as músicas que marcaram  seu ano.",
       image: "/album15.jpg",
       favorites: false,
     },
     {
       id: 3,
-      name: "Daily Mix 2",
-      description: "Gunna, Lil Uzi Vert, Playboi Carti e mais",
+      name: "Caminho diário",
+      description: "Um mix de músicas e notícias feito para você",
       image: "/album16.jpg",
       favorites: false,
     },
     {
       id: 4,
-      name: "Daily Mix 3",
-      description: "Yunk Vino, Derek, Veigh e mais",
+      name: "De volta pro repeat",
+      description: "Recordar é viver",
       image: "/album17.jpg",
       favorites: false,
     }

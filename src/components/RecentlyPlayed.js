@@ -46,7 +46,7 @@ const RecentlyPlayed = () => {
             <a href="#" className="bg-white/5 p-3 rounded-md hover:bg-white/10 flex flex-col gap-2">
               <img src={playlist.image} className="w-full rounded" alt={`Playlist ${playlist.name}`} width={10} height={10}/>
               <strong className="max-w-[150px] whitespace-nowrap overflow-hidden text-ellipsis font-semibold">{playlist.name}</strong>
-              <span className="overflow-hidden text-ellipsis line-clamp-2 font-semibold text-zinc-400">{playlist.type === 'playlist' ? `De ${playlist.artist}` : `${playlist.artist}`}</span>
+              <span className="overflow-hidden text-sm text-ellipsis line-clamp-2 font-semibold text-zinc-400">{playlist.type === 'playlist' ? `De ${playlist.artist}` : `${playlist.artist}`}</span>
             </a>
           ))
         }
