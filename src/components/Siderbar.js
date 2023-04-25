@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 const Siderbar = () => {
 
-  const [section, setSection] = useState('search')
+  const [section, setSection] = useState('home')
 
   return (
     <aside className="fixed w-72 bg-zinc-950 p-6 overflow-y-auto h-[calc(100vh-119px)] 
