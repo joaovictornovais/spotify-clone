@@ -1,4 +1,3 @@
-import Footer from './components/Footer';
 import Siderbar from './components/Siderbar';
 import Inicio from './pages/Inicio';
 
@@ -7,6 +6,7 @@ import Buscar from './pages/Buscar';
 import Biblioteca from './pages/Biblioteca';
 import UpNav from './components/UpNav';
 import Playlist from './pages/Playlist';
+import WebPlayer from './components/WebPlayer';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <div className="bg-zinc-900 h-screen text-zinc-50 flex flex-col overflow-hidden">
         <div className="flex flex-1">
           <Siderbar />
-          <main className="flex-1 md:ml-[288px] p-6 overflow-y-auto h-[calc(100vh-119px)] 
+          <main className="flex-1 md:ml-[288px] p-6 overflow-y-auto md:h-[calc(100vh-119px)] h-screen 
           scrollbar-thumb-gray-300
           scrollbar-thin
           scrollbar-h-2">
@@ -27,7 +27,7 @@ function App() {
             </Routes>
           </main>
         </div>
-        <Footer />
+        <WebPlayer />
       </div>
     </Router>
   );
