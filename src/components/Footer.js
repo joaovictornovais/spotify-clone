@@ -1,10 +1,13 @@
 import { Home, Library, Play, Search, Shuffle, SkipBack, SkipForward, Target } from 'lucide-react'
 import { Heart } from 'lucide-react'
 import { Laptop2, LayoutList, Mic2, Repeat, Volume1 } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const WebPlayer = () => {
+const Footer = () => {
+
+  const [section, setSection] = useState('home')
+
   return (
     <footer className="w-full bottom-0 fixed">
       <div className="md:flex hidden  bg-zinc-900 border-t border-zinc-700 p-6 items-center justify-between">
@@ -26,7 +29,7 @@ const WebPlayer = () => {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xs text-zinc-500">0:31</span>
-            <div className="h-1 rounded-full w-[calc(70vw-400px)] bg-zinc-600">
+            <div className="h-1 rounded-full w-[calc(70vw-400px)] max-w-[722px] bg-zinc-600">
               <div className="bg-zinc-200 w-[3vw] h-1 rounded-full"></div>
             </div>
             <span className="text-xs text-zinc-500">4:09</span>
@@ -44,7 +47,7 @@ const WebPlayer = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden flex flex-col justify-between py-8 px-3 text-zinc-400 bg-gradient-to-t from-black gap-3">
+      <div className="md:hidden flex flex-col justify-between py-6 px-3 text-zinc-400 bg-gradient-to-t from-black gap-3">
         <div className="flex flex-col items-center">
           <div className="flex items-center justify-between w-full bg-zinc-700 rounded-md ">
             <div className="flex items-center gap-3 p-3">
@@ -66,19 +69,19 @@ const WebPlayer = () => {
         </div>
         
         <nav className="flex gap-5 items-center justify-between w-full">
-          <Link to="/" className="flex flex-col items-center ">
+          <Link to="/" onClick={() => setSection('home')} className={section === 'home' ? 'flex flex-col items-center text-zinc-100' : 'flex flex-col items-center'}>
             <Home />
             <span className="text-sm">Início</span>
           </Link>
-          <Link to="/buscar" className="flex flex-col items-center">
+          <Link to="/buscar" onClick={() => setSection('search')} className={section === 'search' ? 'flex flex-col items-center text-zinc-100' : 'flex flex-col items-center'}>
             <Search />
             <span className="text-sm">Buscar</span>
           </Link>
-          <Link to="/biblioteca" className="flex flex-col items-center">
+          <Link to="/biblioteca" onClick={() => setSection('library')} className={section === 'library' ? 'flex flex-col items-center text-zinc-100' : 'flex flex-col items-center'}>
             <Library />
             <span className="text-sm">Bilbioteca</span>
           </Link>
-          <Link to="/" className="flex flex-col items-center">
+          <Link to="/" onClick={() => setSection('premium')} className={section === 'premium' ? 'flex flex-col items-center text-zinc-100' : 'flex flex-col items-center'}>
             <Target />
             <span className="text-sm">Premium</span>
           </Link>
@@ -88,4 +91,4 @@ const WebPlayer = () => {
   )
 }
 
-export default WebPlayer
+export default Footer

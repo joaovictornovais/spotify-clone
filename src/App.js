@@ -6,7 +6,7 @@ import Buscar from './pages/Buscar';
 import Biblioteca from './pages/Biblioteca';
 import UpNav from './components/UpNav';
 import Playlist from './pages/Playlist';
-import WebPlayer from './components/WebPlayer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
             </Routes>
           </main>
         </div>
-        <WebPlayer />
+        <Footer />
       </div>
     </Router>
   );
