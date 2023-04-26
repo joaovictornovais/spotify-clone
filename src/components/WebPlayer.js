@@ -44,7 +44,7 @@ const WebPlayer = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden flex flex-col justify-between py-8 px-3 text-zinc-400 bg-gradient-to-t from-black gap-3">
+      <div className="lg:hidden flex flex-col justify-between py-8 px-3 text-zinc-400 bg-gradient-to-t from-black gap-3">
         <div className="flex flex-col items-center">
           <div className="flex items-center justify-between w-full bg-zinc-700 rounded-md ">
             <div className="flex items-center gap-3 p-3">
