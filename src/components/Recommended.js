@@ -58,7 +58,7 @@ const Recommended = () => {
   return (
     <>
     <h1 className="text-3xl font-bold mt-10">{greetings}</h1>
-    <div className="grid grid-cols-3 gap-6 mt-5">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
       {
         albums.map((album) => (
           <a href="#" className="bg-white/5 rounded group flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors">
